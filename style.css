@@ -1,49 +1,38 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 body{
     background: linear-gradient(to right, #36042e, #86193e);
-    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .container{
-    /* border: 5px solid red; */
-    height: 670px;
+    /* background: linear-gradient(to right, #36042e, #86193e); */
+    height: 585px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 10px; */
 }
 
 .container__formSection{
-    /* border: 3px solid blue; */
-    height: 500px;
+    height: 480px;
     width: 700px;
-    /* padding: 5px; */
     display: flex;
-    /* position: relative; */
-    /* left: 370px; */
-    /* top: 50px; */
 }
 
 .formSection__left{
     width: 50%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid brown; */
-    padding: 10px;
     background-color: rgb(2, 2, 77);
 }
 
 .formSection__right{
     width: 50%;
-    height: 100%;
-    /* border: 2px solid brown; */
     background-image: url(images/brunch.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -106,4 +95,11 @@ button{
 input::placeholder{
     font-weight: bold;
     color: white;
+}
+
+@media screen and (max-width: 767px){
+    .container__formSection{
+        display: flex;
+        flex-direction: column;
+    }
 }
